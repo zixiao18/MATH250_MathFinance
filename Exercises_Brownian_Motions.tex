@@ -127,13 +127,14 @@ d_{\pm} = \frac1{\sigma_1\sqrt{r}} \left( log\frac xK + (r\pm\frac12\sigma_1^2)r
 \]
 However, the underlying asset is indeed a geometric Brownian motion with volatility 
 \[\sigma_2>\sigma_1: dS(t)=\alpha S(t)dt + \sigma_2S(t)dW(t).\]
-We set up a profolio with value denoted by $X(t)$. Hence, 
+We set up a profolio with value denoted by $X(t)$. 
+\\We remove cash from this portfolio at a rate $(\sigma_2^2-\sigma_1^2)S^2c_{xx}/2>0$. Hence, 
 \[
-dX = dc - c_xdS + r(X-c+Sc_x)dt
+dX = dc - c_xdS + r(X-c+Sc_x)dt - (\sigma_2^2-\sigma_1^2)S^2c_{xx}/2
 \]
 \begin{enumerate}
-\item Compute $d(e^{-rt}X(t))$.
-\item Show that there is an arbitrage opportunity by proving $dX = (\sigma_2^2-\sigma_1^2)S^2c_{xx}/2>0$.
+\item Show that $dX=rXdt$.
+\item Write out the It$\hat o$'s formula for $d(e^{-rt}X(t))$. Deduce $dX=0$. \\This implies the existence of an arbitrage opportunity.
 \end{enumerate}
 \item (Exercise 4.20 [Shreve] Local Time)
 The It$\hat o$'s Lemma in differential form says that \[df(x,t)=f_tdt+f_xdx+\frac12f_{xx}dxdx.\] Plug in $x=W(t)$ to get 
@@ -143,7 +144,7 @@ df(W(t)) = f'(W(t))dW(t)+\frac12f''(W(t))dt.
 \end{equation}
 \begin{enumerate}
 \item Let $K>0$ a constant, and define $f(x)=max(x-K,0)$. Compute $f'(x), f''(x)$. Be careful about the points when either differential is not defined.
-\item Show that Equation \ref{eq:dfW} does not hold for $f(x)=max(x-K,0)$. Hint: Consider the expected values on both sides.
+\item Show that Equation \ref{eq:dfW} does not hold for $f(x)=max(x-K,0)$. Hint: Consider taking expected values and integrals on both sides.
 \end{enumerate}
 To get some idea of what is going on here, we define a sequence of functions $\{f_n\}_{n=1}^{\infty}$ by
 \[
