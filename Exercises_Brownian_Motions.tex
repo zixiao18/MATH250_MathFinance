@@ -111,7 +111,8 @@ Denote $\theta = (\alpha-r)/\sigma$ as the \emph{market price of risk}, where \e
 $\zeta(t) = exp\left\{ -\theta W(t) - \left(r+ \theta^2/2\right)t \right\}$. 
 \begin{enumerate}
 \addtocounter{enumii}{3}
-\item Find $d\zeta$.
+\item Find $d\zeta$. Hint: use two different ways to express
+$d(e^{rt}\zeta)$
 \item Show that $\zeta(t)X(t)$ is a martingale. (i.e. $d(\zeta(t)X(t))$ has no $dt$-terms). 
 \end{enumerate}
 From (c), the \emph{present value} at $t=0$ of the random payment $V(T)$ at $t=T$ is $X(0)=\mathbb E(\zeta(T)V(T))$. Hence it is valid to call $\zeta(t)$ the \emph{state price density process}.
