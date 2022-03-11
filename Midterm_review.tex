@@ -92,12 +92,24 @@ dW\sim\mathcal N(0,dt)
 \[
 dW(t)dW(t)=dt, dW(t)dt=0, dtdt=0
 \]
+\newpage
 \item Derive the formula for $d(W^2)$, $d(W^4)$.
 \end{enumerate}
 Property 2: all the increment $dW$s are independent from each other.
 \begin{enumerate}
-\item Suppose $X(T)=\int_0^T f(x)dt + \int_0^T g(x)dW_t$. Find $Var(X)$
+\item Suppose $X(T)=\int_0^T f(t)dt + \int_0^T g(t)dW_t$. Find $Var(X)$
 \end{enumerate}
+\newpage
+Property 3: Brownian Motions are a Martingale.
+\\
+Suppose a random walk on 1D-axis with $X(0)=0$ and 
+\[
+dX = X(t+1) -X(t) =
+\begin{cases}
+1 & p=1/2 \\
+-1 & p=1/2
+\end{cases}
+\] 
 \newpage
 \item Ito's Formula
 \\
@@ -177,8 +189,8 @@ d_{\pm} = \frac1{\sigma\sqrt{T-t}} \left(log \frac xK + \left(r\pm \frac {\sigma
 The problems about the BSM equations could be extremely difficult. For a reference, you may take a look at the problem as an excerpt of Exercise 4.9 [Shreve]
 \begin{enumerate}
 \item Show that for $x>K$, $\lim_{t\to T^-}d_{\pm}=\infty$, but for $0< x< K$,  $\lim_{t\to T^-}d_{\pm}=-\infty$
-\item Show that for $0\leq t<T$,  $\lim_{t\to 0^+}d_{\pm}=-\infty$
-\item Show that for $0\leq t<T$,  $\lim_{t\to \infty}d_{\pm}=\infty$.
+\item Show that for $0\leq x<T$,  $\lim_{t\to 0^+}d_{\pm}=-\infty$
+\item Show that for $0\leq x<T$,  $\lim_{t\to \infty}d_{\pm}=\infty$.
 \item Use (c) to verify \[ lim_{x\to\infty} \left(c(t,x)-(x-e^{-r(T-t)K})\right)=0 \]. 
 \\
 Hint: In this verification, you will need to show that 
